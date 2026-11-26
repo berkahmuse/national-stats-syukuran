@@ -1,8 +1,8 @@
 # BharatNumbers — India in figures
 
-[![make.fun](https://make.fun/badge/best-national-statistics-site-20261126-0539.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
-[![rank](https://make.fun/badge/best-national-statistics-site-20261126-0539/syukuran/national-stats-syukuran/rank.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
-[![reward](https://make.fun/badge/best-national-statistics-site-20261126-0539/syukuran/national-stats-syukuran/reward.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
+[![make.fun · best-national-statistics-site-20261126-0539](https://make.fun/badge/best-national-statistics-site-20261126-0539.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
+[![rank](https://make.fun/badge/best-national-statistics-site-20261126-0539/berkahmuse/national-stats-syukuran/rank.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
+[![reward](https://make.fun/badge/best-national-statistics-site-20261126-0539/berkahmuse/national-stats-syukuran/reward.svg)](https://make.fun/bounty/best-national-statistics-site-20261126-0539)
 
 An independent national statistics site for India — population, economy,
 digital payments, health and education — with every figure sourced and
