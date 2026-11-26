@@ -61,18 +61,20 @@ export function lineChart(series, opts = {}) {
   return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Line chart" class="chart">${grid}<polygon points="${area}" fill="${opts.color || "#1e7a4c"}" opacity="0.12"/><polyline points="${pts}" fill="none" stroke="${opts.color || "#1e7a4c"}" stroke-width="2.5" stroke-linejoin="round"/>${dots}${labels}</svg>`;
 }
 
-// Horizontal bars for shares. rows: [{name, value}]
+// Horizontal bars. rows: [{name, value}]; opts.unit is the label suffix
+// (default "%" — pass e.g. " ₹ lakh cr" when the values are not shares).
 export function hbarChart(rows, opts = {}) {
   const w = 720, rh = 44, padL = 170, padR = 64, padT = 8;
   const h = padT + rows.length * rh + 8;
   const max = niceMax(Math.max(...rows.map((r) => r.value)));
+  const unit = opts.unit ?? "%";
   let out = "";
   for (let i = 0; i < rows.length; i++) {
     const r = rows[i], y = padT + i * rh;
     const bw = ((w - padL - padR) * r.value) / max;
     out += `<text x="${padL - 10}" y="${y + 22}" text-anchor="end" font-size="13" fill="#16233f">${esc(r.name)}</text>`;
-    out += `<rect x="${padL}" y="${y + 8}" width="${Math.max(2, bw).toFixed(1)}" height="20" rx="3" fill="${opts.color || "#1e2a4a"}"><title>${esc(r.name)}: ${r.value}%</title></rect>`;
-    out += `<text x="${(padL + Math.max(2, bw) + 8).toFixed(1)}" y="${y + 23}" font-size="13" font-weight="700" fill="#16233f">${r.value}%</text>`;
+    out += `<rect x="${padL}" y="${y + 8}" width="${Math.max(2, bw).toFixed(1)}" height="20" rx="3" fill="${opts.color || "#1e2a4a"}"><title>${esc(r.name)}: ${r.value}${unit}</title></rect>`;
+    out += `<text x="${(padL + Math.max(2, bw) + 8).toFixed(1)}" y="${y + 23}" font-size="13" font-weight="700" fill="#16233f">${r.value}${unit}</text>`;
   }
   return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Horizontal bar chart" class="chart">${out}</svg>`;
 }

@@ -129,7 +129,7 @@ export function yearKpis(year) {
 export function sectorChart(view) {
   if (view === "value") {
     const gdp = 330.7; // ₹ lakh crore, nominal GDP FY 2024-25 (MoSPI)
-    return hbarChart(SECTORS.map((s) => ({ name: s.name, value: Math.round((s.value / 100) * gdp) })), { color: "#c75b12" });
+    return hbarChart(SECTORS.map((s) => ({ name: s.name, value: Math.round((s.value / 100) * gdp) })), { color: "#c75b12", unit: " ₹ lakh cr" });
   }
   return hbarChart(SECTORS, { color: "#c75b12" });
 }
@@ -154,7 +154,7 @@ export function renderEconomy(state) {
     <h3>Trade, FY 2024-25</h3>
     <ul class="fact-list">
       ${TRADE.map((t) => `<li><span>${esc(t.label)} <span class="s">Ministry of Commerce and Industry</span></span><span class="v">$${t.value.toFixed(1)}bn</span></li>`).join("")}
-      <li><span>Total exports (goods + services) <span class="s">Ministry of Commerce and Industry</span></span><span class="v">$824.9bn</span></li>
+      <li><span>Total exports (goods + services) <span class="s">Ministry of Commerce and Industry — components rounded; total as published</span></span><span class="v">$824.9bn</span></li>
     </ul>
   </section>
   <section class="card">
@@ -183,7 +183,7 @@ export function renderDigital(state) {
       <div>
         <h3>Connectivity</h3>
         <ul class="fact-list">
-          <li><span>Internet subscribers <span class="s">TRAI, March 2025</span></span><span class="v">936m</span></li>
+          <li><span>Internet subscribers <span class="s">TRAI, March 2025</span></span><span class="v">969m</span></li>
           <li><span>Telephone subscribers <span class="s">TRAI, March 2025</span></span><span class="v">1.20bn</span></li>
           <li><span>Jan Dhan bank accounts <span class="s">PMJDY, August 2025</span></span><span class="v">55.9 crore</span></li>
         </ul>

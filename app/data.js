@@ -81,14 +81,15 @@ export const AGE_STRUCTURE = [
 ];
 
 // Age pyramid, 2024: share of total population in each 5-year band, %.
-// UN WPP 2024; shares rounded, so bands may not sum to exactly 100.
+// UN WPP 2024; bands are scaled to the same source as AGE_STRUCTURE, so
+// they sum to 100.0 and group to 0-14 = 25.3, 15-64 = 67.8, 65+ = 6.9.
 export const PYRAMID_2024 = [
-  { band: "0-4", m: 4.3, f: 3.9 }, { band: "5-9", m: 4.5, f: 4.1 }, { band: "10-14", m: 4.6, f: 4.2 },
-  { band: "15-19", m: 4.6, f: 4.2 }, { band: "20-24", m: 4.5, f: 4.1 }, { band: "25-29", m: 4.3, f: 4.0 },
-  { band: "30-34", m: 3.9, f: 3.7 }, { band: "35-39", m: 3.6, f: 3.4 }, { band: "40-44", m: 3.2, f: 3.0 },
-  { band: "45-49", m: 2.8, f: 2.7 }, { band: "50-54", m: 2.5, f: 2.4 }, { band: "55-59", m: 2.1, f: 2.1 },
-  { band: "60-64", m: 1.7, f: 1.8 }, { band: "65-69", m: 1.4, f: 1.5 }, { band: "70-74", m: 1.0, f: 1.1 },
-  { band: "75-79", m: 0.6, f: 0.8 }, { band: "80+", m: 0.5, f: 1.2 },
+  { band: "0-4", m: 4.2, f: 3.9 }, { band: "5-9", m: 4.4, f: 4.1 }, { band: "10-14", m: 4.5, f: 4.2 },
+  { band: "15-19", m: 4.9, f: 4.4 }, { band: "20-24", m: 4.7, f: 4.3 }, { band: "25-29", m: 4.5, f: 4.2 },
+  { band: "30-34", m: 4.1, f: 3.9 }, { band: "35-39", m: 3.8, f: 3.6 }, { band: "40-44", m: 3.4, f: 3.1 },
+  { band: "45-49", m: 2.9, f: 2.8 }, { band: "50-54", m: 2.6, f: 2.5 }, { band: "55-59", m: 2.2, f: 2.2 },
+  { band: "60-64", m: 1.8, f: 1.9 }, { band: "65-69", m: 1.2, f: 1.3 }, { band: "70-74", m: 0.9, f: 0.9 },
+  { band: "75-79", m: 0.5, f: 0.7 }, { band: "80+", m: 0.4, f: 1.0 },
 ];
 
 // States and union territories with the largest populations. Population is the
@@ -108,8 +109,8 @@ export const STATES = [
   { name: "Odisha", region: "East", pop: 47.2, density: 269, literacy: 77.3, capital: "Bhubaneswar" },
   { name: "Jharkhand", region: "East", pop: 40.1, density: 414, literacy: 74.3, capital: "Ranchi" },
   { name: "Telangana", region: "South", pop: 39.2, density: 312, literacy: 72.8, capital: "Hyderabad" },
-  { name: "Assam", region: "North-East", pop: 35.6, density: 398, literacy: 85.9, capital: "Dispur" },
   { name: "Kerala", region: "South", pop: 35.8, density: 859, literacy: 96.2, capital: "Thiruvananthapuram" },
+  { name: "Assam", region: "North-East", pop: 35.6, density: 398, literacy: 85.9, capital: "Dispur" },
   { name: "Punjab", region: "North", pop: 30.9, density: 551, literacy: 83.7, capital: "Chandigarh" },
   { name: "Haryana", region: "North", pop: 29.8, density: 573, literacy: 80.4, capital: "Chandigarh" },
   { name: "Chhattisgarh", region: "Central", pop: 29.6, density: 189, literacy: 77.3, capital: "Raipur" },
@@ -153,7 +154,7 @@ export const WORLD = [
 export const HEALTH_EDU = [
   { label: "Life expectancy at birth", value: "67.7 years", source: "World Bank WDI, 2023" },
   { label: "Infant mortality", value: "25 per 1,000 live births", source: "Sample Registration System, 2022" },
-  { label: "Maternal mortality", value: "90 per 100,000 live births", source: "Sample Registration System, 2019-21" },
+  { label: "Maternal mortality", value: "93 per 100,000 live births", source: "Sample Registration System, 2019-21" },
   { label: "Total fertility rate", value: "2.0 children per woman", source: "UN WPP 2024 (2023)" },
   { label: "Sex ratio", value: "1,020 females per 1,000 males", source: "NFHS-5, 2019-21" },
   { label: "Multidimensional poverty", value: "11.3% of people", source: "NITI Aayog MPI, 2022-23" },
@@ -165,7 +166,7 @@ export const HEALTH_EDU = [
 
 // Digital India.
 export const DIGITAL = [
-  { label: "Internet subscribers", value: "936m", source: "TRAI, March 2025" },
+  { label: "Internet subscribers", value: "969m", source: "TRAI, March 2025" },
   { label: "Telephone subscribers", value: "1.20bn", source: "TRAI, March 2025" },
   { label: "UPI transactions, FY 2024-25", value: "18,587 crore", source: "NPCI, 2024-25" },
   { label: "UPI value, FY 2024-25", value: "₹261 lakh crore", source: "NPCI, 2024-25" },
